@@ -1,0 +1,241 @@
+.adventures {
+  padding-top: 146px;
+
+  &-title {
+    margin-left: 138px;
+
+    img {
+      transition: transform, opacity, filter;
+      transition-duration: 1.5s;
+      transition-delay: .2s;
+      transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+  }
+
+  &-infoWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    //margin: 88px auto 170px;
+    margin: 88px auto 0;
+    width: 100%;
+
+    >* {
+      width: calc(50% - 16px);
+    }
+
+    &-image {
+      //margin-left: 32px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      isolation: isolate;
+      padding-bottom: calc(50% - 50px);
+      transition: opacity .4s;
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 16px;
+        animation: scaleImage 40s linear infinite;
+      }
+      @keyframes scaleImage {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  .infoBlock-illustrationWrap {
+    &:before, &:after {
+      transition: transform .7s;
+    }
+  }
+
+  .swiper-slide {
+    transition: color .8s .7s;
+
+    div { transition: transform .8s .7s; }
+  }
+
+  .infoBlock-illustrationWrap-funcIcon {
+    transition: opacity, transform;
+    transition-duration: .8s;
+  }
+  .arrowImg {
+    transition: transform 0.9s 1s, opacity .8s .4s;
+    margin: auto;
+    //transition-timing-function: linear;
+  }
+  .infoBlock-scrollWrap {
+    //transition: opacity .5s 1s;
+  }
+
+  .infoBlock-textWrap-firstText:after,
+  .infoBlock-illustrationWrap-arrow:before, .infoBlock-textBox-text:nth-child(1):before, .infoBlock-illustrationWrap-arrow:after {
+    transition: transform .8s .4s;
+  }
+
+  .infoBlock-scrollWrap * {
+    animation-fill-mode: both !important;
+    //animation-play-state: paused !important;
+    animation-delay: 1s !important;
+  }
+
+  //* {
+  //  transition: 0s 0s !important;
+  //}
+
+  .infoBlock-scrollWrap-icons {
+    transition: opacity .8s;
+
+    .lIcon, .sIcon {
+      animation-timing-function: ease;
+      animation-duration: 0.6s !important;
+    }
+  }
+}
+
+.adventures:not(.show) {
+  .adventures-title img {
+    filter: blur(20px);
+    opacity: 0;
+    transform: scale(1.2);
+  }
+
+  .infoBlock {
+    &:before {
+      opacity: 0;
+    }
+  }
+
+  .adventures-infoWrap-image {
+    opacity: 0;
+  }
+
+  .infoBlock-illustrationWrap {
+    &:before, &:after {
+      transform: scaleX(0);
+    }
+  }
+
+  .swiper-slide {
+    color: transparent;
+
+    div {
+      transform: translateY(40%);
+    }
+  }
+
+  .infoBlock-scrollWrap-icons {
+    opacity: 0;
+  }
+
+  .infoBlock-illustrationWrap-funcIcon {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+
+  .arrowImg {
+    opacity: 0;
+    transform: scaleX(0.3);
+  }
+
+  .infoBlock-scrollWrap {
+    opacity: 0;
+  }
+
+  .infoBlock-textWrap-firstText:after,
+  .infoBlock-illustrationWrap-arrow:before {
+    transform: scaleY(0);
+  }
+
+  .infoBlock-scrollWrap * {
+    animation-fill-mode: both !important;
+    animation-play-state: paused !important;
+  }
+}
+
+
+
+@media (max-width: 1300px) {
+  .adventures-infoWrap{
+    display: block;
+  }
+
+  .adventures-infoWrap > *{
+    width: 100%;
+  }
+
+  .adventures-infoWrap .infoBlock{
+    margin-bottom: 30px;
+  }
+
+  .adventures-infoWrap-image{
+    padding-bottom: calc(65% - 50px);
+  }
+}
+
+@media (max-width: 992px) {
+  .adventures{
+    padding-top: 100px;
+  }
+
+  .adventures-title{
+    margin-left: 0;
+    max-width: 410px;
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+  .adventures-infoWrap{
+    margin-top: 50px;
+  }
+
+
+  .adventures-infoWrap-image{
+    padding-bottom: 704px;
+  }
+
+}
+
+
+
+
+
+@media (max-width: 576px) {
+
+
+  .adventures-infoWrap-image {
+    padding-bottom: 382px;
+  }
+}
+
+@media (max-width: 410px) {
+  .adventures-title{
+    width: 280px;
+  }
+  .adventures-infoWrap{
+    margin-top: 30px;
+  }
+  .adventures .arrowImg{
+    width: 240px;
+  }
+
+}

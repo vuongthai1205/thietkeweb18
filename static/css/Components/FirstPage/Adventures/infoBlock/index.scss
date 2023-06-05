@@ -1,0 +1,621 @@
+.infoBlock {
+  border-radius: 16px;
+  //overflow: hidden;
+  position: relative;
+  //animation: showBlock 0.5s linear;
+
+  &-textWrap {
+    display: flex;
+    //overflow: scroll;
+    font-family: 'Space Grotesk', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 34px;
+    color: #FFFFFF;
+    opacity: 0.85;
+
+    &-firstText {
+      min-width: 481px;
+      width: 481px;
+      position: relative;
+      padding: 36px 31px 39px 48px;
+
+      &:not(:last-child):after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 1px;
+        background: #98989C;
+        transform-origin: top;
+      }
+
+      .firstTextLine {
+        position: absolute;
+        width: 211px;
+        height: 560px;
+        top: -174px;
+        left: 175px;
+        transform: rotate(90deg);
+      }
+      .firstTextLine:before {
+        content: '';
+        position: absolute;
+        width:100%;
+        height: 1px;
+        background: #BFE2FF;
+        animation: firstTextLine 2s linear;
+      }
+
+      @keyframes firstTextLine {
+        0% {
+          transform:scaleX(0);
+          transform-origin: left;
+        }
+        50% {
+          transform:scaleX(1);
+          transform-origin: left;
+        }
+      }
+    }
+    &-lastText {
+      min-width: 464px;
+      padding: 36px 31px 39px 32px;
+    }
+  }
+  &-illustrationWrap {
+    display: flex;
+    align-items: center;
+    height: 215px;
+    position: relative;
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      left: 0;
+      background: #98989C;
+      transform-origin: left;
+    }
+
+    &:before { top: 0; }
+    &:after { bottom: 0; }
+
+    &-arrow {
+      //padding: 0 64px 0 64px;
+      position: relative;
+      height: 100%;
+      width: 140%;
+      display: flex;
+      align-items: center;
+
+      &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background: #98989C;
+        transform-origin: top;
+      }
+
+      .arrowImg {
+        //animation-delay: 2s;
+        //animation-duration: 1s;
+        //animation: scaleArrow 1s linear;
+      }
+    }
+    &-funcIcon {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+    }
+  }
+  &-scrollWrap {
+    height: 290px;
+    //align-items: center;
+    //display: flex;
+    //justify-content: center;
+    position: relative;
+
+    &-icons {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+
+
+      .sIcons {
+        position: absolute;
+        z-index: -1;
+
+        // $sIconsStartPos: -14px;
+        // $sIconsStep: 14px;
+
+        // @for $var from 1 to 5 {
+
+        // }
+
+        // .oneS {
+        //   left: $sIconsStartPos;
+        //   animation: oneSAnim 2s linear;
+        // }
+        // @keyframes oneSAnim {
+        //   0% { left: 0; }
+        //   50% { left: $sIconsStartPos; }
+        // }
+        // .twoS {
+        //   left: $sIconsStartPos - $sIconsStep;
+        //   z-index: -1;
+        //   animation: twoSAnim 2s linear;
+        // }
+        // @keyframes twoSAnim {
+        //   0% { left: 0; }
+        //   50% { left: $sIconsStartPos - $sIconsStep; }
+        // }
+        // .threeS {
+        //   left: $sIconsStartPos - $sIconsStep * 2;
+        //   z-index: -2;
+        //   animation: threeSAnim 2s linear;
+        // }
+        // @keyframes threeSAnim {
+        //   0% { left: 0; }
+        //   50% { left: $sIconsStartPos - $sIconsStep * 2; }
+        // }
+        // .fourS {
+        //   left: $sIconsStartPos - $sIconsStep * 3;
+        //   z-index: -3;
+        //   animation: fourSAnim 2s linear;
+        // }
+        // @keyframes fourSAnim {
+        //   0% { left: 0; }
+        //   50% { left: $sIconsStartPos - $sIconsStep * 3; }
+        // }
+        // .fiveS {
+        //   left: $sIconsStartPos - $sIconsStep * 4;
+        //   z-index: -4;
+        //   animation: fiveSAnim 2s linear;
+        // }
+        // @keyframes fiveSAnim {
+        //   0% { left: 0; }
+        //   50% { left: $sIconsStartPos - $sIconsStep * 4; }
+        // }
+      }
+      .lIcons {
+        position: absolute;
+        z-index: -1;
+        right: 62px;
+
+        // $lIconsStartPos: 14px;
+        // $lIconsStep: 14px;
+
+        // .oneL {
+        //   left: $lIconsStartPos;
+        //   animation: oneLAnim 2s linear;
+        // }
+        // @keyframes oneLAnim {
+        //   0% { left: 0; }
+        //   50% { left: $lIconsStartPos; }
+        // }
+        // .twoL {
+        //   left: $lIconsStartPos + $lIconsStep;
+        //   animation: twoLAnim 2s linear;
+        //   z-index: -1;
+        // }
+        // @keyframes twoLAnim {
+        //   0% { left: 0; }
+        //   50% { left: $lIconsStartPos + $lIconsStep; }
+        // }
+        // .threeL {
+        //   left: $lIconsStartPos + $lIconsStep * 2;
+        //   animation: threeLAnim 2s linear;
+        // }
+        // @keyframes threeLAnim {
+        //   0% { left: 0; }
+        //   50% { left: $lIconsStartPos + $lIconsStep * 2; }
+        // }
+        // .fourL {
+        //   left: $lIconsStartPos + $lIconsStep * 3;
+        //   animation: fourLAnim 2s linear;
+        // }
+        // @keyframes fourLAnim {
+        //   0% { left: 0; }
+        //   50% { left: $lIconsStartPos + $lIconsStep * 3; }
+        // }
+        // .fiveL {
+        //   left: $lIconsStartPos + $lIconsStep * 4;
+        //   animation: fiveLAnim 2s linear;
+        // }
+        // @keyframes fiveLAnim {
+        //   0% { left: 0; }
+        //   50% { left: $lIconsStartPos + $lIconsStep * 4; }
+        // }
+      }
+    }
+
+    .sIcon, .lIcon {
+      position: absolute;
+    }
+
+    .sIcon {
+      $sIconsStartPos: -14px;
+      $sIconsStep: 14px;
+
+      @for $index from 1 to 7 {
+        &:nth-child(#{$index})  {
+          left: 0;
+          z-index: 1 - $index;
+          animation: SAnim-#{$index} 2s linear ;
+        }
+        @keyframes SAnim-#{$index} {
+            100% { left: $sIconsStartPos - $sIconsStep * ($index - 1); }
+        }
+      }
+    }
+
+    .lIcon {
+      $lIconsStartPos: 14px;
+      $lIconsStep: 14px;
+
+      @for $index from 1 to 7 {
+        &:nth-child(#{$index})  {
+          left: 0;
+          // z-index: $index;
+          animation: lAnim-#{$index} 2s linear ;
+        }
+        @keyframes lAnim-#{$index} {
+            100% { left: $lIconsStartPos + $lIconsStep * ($index - 1); }
+        }
+      }
+    }
+  }
+
+  &-word {
+
+  }
+}
+//@keyframes showBlock {
+//  0% { opacity: 0; }
+//  100% { opacity: 1; }
+//}
+.infoBlock:before {
+  content: '';
+  background: url("../../../../assets/images/star-bg.png") black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #98989C;
+  border-radius: 16px;
+  box-sizing: border-box;
+  transition: opacity 0.7s;
+}
+
+
+@media (max-width: 1400px) and (min-width: 1301px) {
+  .infoBlock-scrollWrap .sIcon, .infoBlock-scrollWrap .lIcon {
+    height: 66px;
+  }
+
+  .infoBlock-word{
+    width: 350px;
+  }
+  .infoBlock-scrollWrap .sIcon {
+    $sIconsStartPos: -6px;
+    $sIconsStep: 7px;
+
+    @for $index from 1 to 7 {
+      &:nth-child(#{$index})  {
+        left: 0;
+        z-index: 1 - $index;
+        animation: SAnim-#{$index} 2s linear ;
+      }
+      @keyframes SAnim-#{$index} {
+          100% { left: $sIconsStartPos - $sIconsStep * ($index - 1); }
+      }
+    }
+  }
+
+  .infoBlock-scrollWrap .lIcon {
+    $lIconsStartPos: 16px;
+    $lIconsStep: 7px;
+
+    @for $index from 1 to 7 {
+      &:nth-child(#{$index})  {
+        left: 16px;
+        // z-index: $index;
+        // animation: none ;
+        animation: lAnim-#{$index} 2s linear ;
+      }
+      @keyframes lAnim-#{$index} {
+          100% { left: $lIconsStartPos + $lIconsStep * ($index - 1); }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 992px) {
+
+  .infoBlock-textBox{
+    position: relative;
+    display: flex;
+    font-family: "Space Grotesk", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+  }
+  .infoBlock-textBox-text{
+    padding: 27px 32px 24px;
+
+    &:nth-child(1) {
+      flex: 0 0 48%;
+      position: relative;
+
+      &:before{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background: #98989C;
+        transform-origin: top;
+      }
+    }
+
+    &:nth-child(2) {
+      flex: 0 0 52%;
+    }
+  }
+
+  .infoBlock-illustrationWrap {
+    display: none;
+  }
+
+  .adventures .infoBlock-illustrationWrap:before{
+    transition: none;
+  }
+
+  .infoBlock-illustrationWrap-arrow{
+    flex: 0 0 48%;
+    max-width: 48%;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .adventures .arrowImg{
+    width: 272px;
+  }
+
+  .infoBlock-illustrationWrap:after{
+    display: none;
+    content: none;
+  }
+
+  .infoBlock-scrollWrap{
+    flex: 0 0 52%;
+    max-width: 52%;
+  }
+
+  .infoBlock-scrollWrap .sIcon, .infoBlock-scrollWrap .lIcon {
+    height: 44px;
+  }
+
+  .infoBlock-word{
+    width: 230px;
+  }
+
+  .infoBlock-scrollWrap .sIcon {
+    $sIconsStartPos: -6px;
+    $sIconsStep: 7px;
+
+    @for $index from 1 to 7 {
+      &:nth-child(#{$index})  {
+        left: 0;
+        z-index: 1 - $index;
+        animation: SAnim-#{$index} 2s linear ;
+      }
+      @keyframes SAnim-#{$index} {
+          100% { left: $sIconsStartPos - $sIconsStep * ($index - 1); }
+      }
+    }
+  }
+
+  .infoBlock-scrollWrap .lIcon {
+    $lIconsStartPos: 32px;
+    $lIconsStep: 7px;
+
+    @for $index from 1 to 7 {
+      &:nth-child(#{$index})  {
+        left: 32px;
+        // z-index: $index;
+        // animation: none ;
+        animation: lAnim-#{$index} 2s linear ;
+      }
+      @keyframes lAnim-#{$index} {
+          100% { left: $lIconsStartPos + $lIconsStep * ($index - 1); }
+      }
+    }
+  }
+
+
+}
+
+@media (max-width: 760px) {
+
+
+  .infoBlock-textBox{
+    display: block;
+  }
+  .infoBlock-textBox-text{
+    max-width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .infoBlock-textBox-text:nth-child(1):before{
+    height: 1px;
+    width: 100%;
+    top: 100%;
+  }
+
+  .infoBlock-illustrationWrap{
+    height: auto;
+    display: none;
+  }
+
+  .infoBlock-illustrationWrap-arrow:before{
+    display: none;
+    content: none;
+  }
+
+  .infoBlock-illustrationWrap-arrow{
+    flex: 1 1 auto;
+    max-width: 100%;
+    padding: 24px 0;
+  }
+
+  .adventures .arrowImg{
+    width: 333px;
+  }
+
+  .infoBlock-illustrationWrap-arrow:before{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    background: #98989C;
+    transform-origin: left;
+    top: 100%;
+    transition: transform 0.7s;
+  }
+
+  .infoBlock-illustrationWrap-arrow:after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    background: #98989C;
+    transform-origin: left;
+    top: 100%;
+    transition: transform 0.7s;
+  }
+
+  .infoBlock-scrollWrap{
+    flex: 1 1 auto;
+    max-width: 100%;
+    height: 96px;
+  }
+
+  .infoBlock-scrollWrap .sIcon, .infoBlock-scrollWrap .lIcon {
+    height: 50px;
+  }
+
+  .infoBlock-word{
+    width: 260px;
+  }
+
+  .infoBlock-scrollWrap .sIcon {
+    $sIconsStartPos: -6px;
+    $sIconsStep: 7px;
+
+    @for $index from 1 to 7 {
+      &:nth-child(#{$index})  {
+        left: 0;
+        z-index: 1 - $index;
+        animation: SAnim-#{$index} 2s linear ;
+      }
+      @keyframes SAnim-#{$index} {
+          100% { left: $sIconsStartPos - $sIconsStep * ($index - 1); }
+      }
+    }
+  }
+
+  .infoBlock-scrollWrap .lIcon {
+    $lIconsStartPos: 28px;
+    $lIconsStep: 7px;
+
+    @for $index from 1 to 7 {
+      &:nth-child(#{$index})  {
+        left: 28px;
+        // z-index: $index;
+        // animation: none ;
+        animation: lAnim-#{$index} 2s linear ;
+      }
+      @keyframes lAnim-#{$index} {
+          100% { left: $lIconsStartPos + $lIconsStep * ($index - 1); }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  .adventures {
+    padding-top: 77px;
+  }
+  .adventures-title{
+    max-width: 307px;
+  }
+
+  .adventures-infoWrap{
+    margin-top: 38px;
+  }
+
+  .infoBlock-textBox{
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .infoBlock-textBox-text{
+    padding: 15px 15px 18px 22px;
+  }
+
+}
+
+@media (max-width: 410px) {
+
+  .adventures .arrowImg{
+    width: 240px;
+  }
+
+  .infoBlock-word {
+    width: 210px;
+  }
+
+  .infoBlock-scrollWrap .sIcon, .infoBlock-scrollWrap .lIcon {
+    height: 40px;
+  }
+
+  .infoBlock-word{
+    width: 210px;
+  }
+
+  .infoBlock-scrollWrap .lIcon {
+    $lIconsStartPos: 35px;
+    $lIconsStep: 7px;
+
+    @for $index from 1 to 7 {
+      &:nth-child(#{$index})  {
+        left: 35px;
+        // z-index: $index;
+        // animation: none ;
+        animation: lAnim-#{$index} 2s linear ;
+      }
+      @keyframes lAnim-#{$index} {
+          100% { left: $lIconsStartPos + $lIconsStep * ($index - 1); }
+      }
+    }
+  }
+}

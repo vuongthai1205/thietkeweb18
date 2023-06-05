@@ -1,0 +1,252 @@
+.header {
+  pointer-events: auto !important;
+  position: fixed;
+  display: flex;
+  max-width: 1600px;
+  // max-width: 1570px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  justify-content: space-between;
+  z-index: 10;
+  font-family: "Chakra Petch", sans-serif;
+  transition: transform 1s .3s;
+
+  &-wrap {
+    position: relative;
+    width: 80%;
+    max-width: 1250px;
+
+    &-menuBtn {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      position: absolute;
+      margin: 32px 0 0 40px;
+      z-index: 1;
+      cursor: pointer;
+      transition: color .3s;
+
+      &:hover {
+        color: #FF3BC8;
+      }
+    }
+    &-zibuIcon {
+      position: absolute;
+      z-index: 1;
+      right: 36%;
+      top: 17px;
+      cursor: pointer;
+      transform: translateX(50%);
+    }
+    &-headerBG {
+      //max-width: 1250px;
+      width: 100%;
+      //position: absolute;
+      top: 0;
+      left: 0;
+      height: 97px;
+      opacity: 0.8;
+      display: block;
+    }
+  }
+  &-btnWrap {
+    margin: 18px 63px 0 10px;
+    //margin: 18px 30px 0 0;
+    background: rgba(0, 0, 0, 1);
+    //backdrop-filter: blur(3.10026px);
+    border-radius: 1000px;
+    height: 78px;
+    position: relative;
+    //.vvv {
+      //position: absolute;
+      //min-width: 211px;
+      //top: 0;
+      //left: 0;
+      //height: 81px;
+      //background: linear-gradient(to right, red, purple);
+      //z-index: -2;
+      //border-radius: 1000px;
+      //padding: 2px;
+    //}
+    &-btn {
+      min-width: 211px;
+      height: 80px;
+      background-image: url("../../assets/images/headerImages/headerBtnBG.png");
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+
+      &-text {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-right: 18px;
+      }
+    }
+    &-btn:before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      right: 0;
+      bottom: 0;
+      left: -1px;
+      z-index: -1;
+      height: 100%;
+      padding: 1px;
+      width: 100%;
+      border-radius: 1000px;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.5), transparent);
+    }
+  }
+
+  .menu-btn-bg {
+    position: absolute;
+    top: -3px;
+    height: 107px;
+  }
+
+  .tablet-logo-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 97px;
+    width: 30%;
+    max-width: 233px;
+  }
+
+  .tablet {
+    display: none;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  @media (max-width: 1300px) {
+    .header-wrap-menuBtn {
+      margin-left: 30px;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .header-wrap-menuBtn {
+      margin-left: 30px;
+    }
+
+    .header-wrap-headerBG {
+      display: none;
+    }
+
+    .tablet {
+      display: block;
+    }
+
+    .header-wrap {
+      height: 97px;
+      width: 100%;
+      position: absolute;
+    }
+
+    .header-btnWrap {
+      position: absolute;
+      right: 0;
+    }
+
+    .header-wrap-zibuIcon {
+      right: 50%;
+    }
+  }
+
+
+  //*new updates start
+
+  @media (max-width: 992px) {
+    .header-btnWrap {
+      margin: 18px 32px 0 10px;
+    }
+  }
+  @media (max-width: 650px) {
+    .tablet {
+      display: none;
+    }
+
+    .mobile {
+      display: block;
+    }
+
+    .header-wrap {
+      height: 72px;
+    }
+
+    .header-btnWrap-btn-text {
+      font-size: 14px;
+      margin-right: 12px;
+    }
+
+    .header-btnWrap-btn-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .header-btnWrap {
+      margin: 9px 15px 0 10px;
+      height: 56px;
+    }
+
+    .header-btnWrap-btn {
+      min-width: 140px;
+      height: 56px;
+      text-decoration: none;
+    }
+
+    .mobile-head-bg {
+      position: absolute;
+      left: 50%;
+      bottom: -73px;
+      width: 70%;
+      transform: translateX(-80%);
+    }
+
+    .header-wrap-menuBtn {
+      margin-left: 15px;
+      margin-top: 22px;
+      font-size: 14px;
+    }
+
+    .header-wrap-zibuIcon {
+      width: 30px;
+    }
+  }
+
+  @media (max-width: 410px) {
+    .header-btnWrap {
+      margin: 18px 15px 0 10px;
+      height: 46px;
+    }
+
+    .header-btnWrap-btn {
+      min-width: 114px;
+      height: 46px;
+    }
+
+    .header-btnWrap-btn-text {
+      margin-right: 8px;
+    }
+
+    .mobile-head-bg {
+      transform: translateX(-83%);
+    }
+  }
+}
+
+
+//*new updates end

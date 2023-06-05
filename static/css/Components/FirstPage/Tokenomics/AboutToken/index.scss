@@ -1,0 +1,412 @@
+.aboutToken {
+  display: flex;
+  flex-wrap: wrap;
+  background: black;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid rgba(216, 216, 216, 0.7);
+  border-radius: 16px;
+  box-sizing: border-box;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../../../assets/images/star-bg.png') no-repeat;
+    background-size: cover;
+  }
+
+
+  &-infoBlock {
+    width: 33.3%;
+    padding: 38px 20px 38px 48px;
+    box-sizing: border-box;
+    z-index: 1;
+    position: relative;
+
+    &-title {
+      font-family: 'Chakra Petch', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 42px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+    &-text {
+      font-family: 'Space Grotesk', sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 23px;
+      line-height: 34px;
+      color: #FFFFFF;
+      opacity: 0.85;
+    }
+    &-circle {
+      width: 170px;
+      height: 170px;
+      background: transparent;
+      border-radius: 50%;
+      transform: rotate(90deg);
+      position: absolute;
+      box-shadow: -1px 0 0 1px rgba(7, 3, 252, 0.75),
+      -1px -1px 0 1px rgba(199, 12, 232, 0.55),
+      -1px 1px 0 1px rgba(199, 12, 232, 0.55),
+      0 -1px 0 1px rgba(199, 12, 232, 0.5),
+      0 1px 0 1px rgba(126, 110, 218, 0.5),
+      1px -1px 0 1px rgba(199, 12, 232, 0.25),
+      1px 1px 0 1px rgba(199, 12, 232, 0.25),
+      1px 0 0 1px rgba(199, 12, 232, 0.75);
+    }
+    .first {
+      left: -2.5%;
+      animation: firstCircle 3s ease-in-out infinite;
+    }
+    .second {
+      //left: 70px;
+      left: calc(-1.5%);
+      animation: secondCircle 3s ease-in-out infinite;
+    }
+    .third {
+      //left: 94px;
+      left: calc(-0.5%);
+      animation: thirdCircle 3s ease-in-out infinite;
+    }
+    .fourth {
+      //left: 118px;
+      left: calc(0.5%);
+      animation: fourthCircle 3s ease-in-out infinite;
+    }
+    .fifth {
+      //left: 142px;
+      left: calc(1.5%);
+      animation: fifthCircle 3s ease-in-out infinite;
+    }
+    .sixth {
+      //left: 166px;
+      left: calc(2.5%);
+      animation: sixthCircle 3s ease-in-out infinite;
+    }
+
+    $pos1: 48px;
+    $pos2: 70px;
+    $pos3: 94px;
+    $pos4: 118px;
+    $pos5: 142px;
+    $pos6: 166px;
+    $pos7: 190px;
+
+    @keyframes firstCircle {
+      0%   {transform: translateX($pos1) rotate(90deg);}
+      25%  {transform: translateX($pos1) rotate(90deg);}
+      40%  {transform: translateX($pos2) rotate(90deg);}
+      48%  {transform: translateX($pos2) rotate(90deg);}
+      70%  {transform: translateX($pos1) rotate(90deg);}
+      100% {transform: translateX($pos1) rotate(90deg);}
+    }
+    @keyframes secondCircle {
+      0%   {transform: translateX($pos2) rotate(90deg);}
+      20%  {transform: translateX($pos2) rotate(90deg);}
+      35%  {transform: translateX($pos3) rotate(90deg);}
+      58%  {transform: translateX($pos3) rotate(90deg);}
+      73%  {transform: translateX($pos2) rotate(90deg);}
+      100% {transform: translateX($pos2) rotate(90deg);}
+    }
+    @keyframes thirdCircle {
+      0%   {transform: translateX($pos3) rotate(90deg);}
+      15%  {transform: translateX($pos3) rotate(90deg);}
+      30%  {transform: translateX($pos4) rotate(90deg);}
+      63%  {transform: translateX($pos4) rotate(90deg);}
+      78%  {transform: translateX($pos3) rotate(90deg);}
+      100% {transform: translateX($pos3) rotate(90deg);}
+    }
+    @keyframes fourthCircle {
+      0%   {transform: translateX($pos4) rotate(90deg);}
+      10%  {transform: translateX($pos4) rotate(90deg);}
+      25%  {transform: translateX($pos5) rotate(90deg);}
+      68%  {transform: translateX($pos5) rotate(90deg);}
+      83%  {transform: translateX($pos4) rotate(90deg);}
+      100% {transform: translateX($pos4) rotate(90deg);}
+    }
+    @keyframes fifthCircle {
+      0%   {transform: translateX($pos5) rotate(90deg);}
+      5%   {transform: translateX($pos5) rotate(90deg);}
+      20%  {transform: translateX($pos6) rotate(90deg);}
+      73%  {transform: translateX($pos6) rotate(90deg);}
+      88%  {transform: translateX($pos5) rotate(90deg);}
+      100% {transform: translateX($pos5) rotate(90deg);}
+    }
+    @keyframes sixthCircle {
+      0%   {transform: translateX($pos6) rotate(90deg);}
+      15%  {transform: translateX($pos7) rotate(90deg);}
+      75%  {transform: translateX($pos7) rotate(90deg);}
+      90%  {transform: translateX($pos6) rotate(90deg);}
+      100% {transform: translateX($pos6) rotate(90deg);}
+    }
+
+  }
+  &-infoBlock:nth-child(1) {
+    border-bottom: 1px solid rgba(216, 216, 216, 0.7);;
+  }
+  &-infoBlock:nth-child(2) {
+    border-left: 1px solid rgba(216, 216, 216, 0.7);;
+    border-right: 1px solid rgba(216, 216, 216, 0.7);;
+    border-bottom: 1px solid rgba(216, 216, 216, 0.7);;
+  }
+  &-infoBlock:nth-child(3) {
+    border-bottom: 1px solid rgba(216, 216, 216, 0.7);;
+  }
+  &-infoBlock:nth-child(5) {
+    border-left: 1px solid rgba(216, 216, 216, 0.7);;
+    border-right: 1px solid rgba(216, 216, 216, 0.7);;
+  }
+}
+
+
+@media (max-width: 1300px) and (min-width: 993px) {
+
+  .tokenomics .inner-wrap{
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    height: 100%;
+  }
+
+
+  .aboutToken-infoBlock-circle {
+    width: 110px;
+    height: 110px;
+    top: calc(50% - 55px);
+  }
+
+  .aboutToken-infoBlock .aboutToken-infoBlock-circle {
+    $step: 1%;
+
+    @for $index from 0 to 6 {
+      &:nth-child(#{$index + 1}) {
+        left: calc(-1% + $step * ($index));
+      }
+    }
+  }
+}
+
+
+
+@media( max-width: 1200px) and (min-width: 993px) {
+
+  .aboutToken-infoBlock .aboutToken-infoBlock-circle {
+    $step: 1%;
+
+    @for $index from 0 to 6 {
+      &:nth-child(#{$index + 1}) {
+        left: calc(-5.5% + $step * ($index));
+      }
+    }
+  }
+
+  $pos1: 44px;
+  $pos2: 66px;
+  $pos3: 90px;
+  $pos4: 114px;
+  $pos5: 138px;
+  $pos6: 162px;
+  $pos7: 186px;
+
+  @keyframes firstCircle {
+    0%   {transform: translateX($pos1) rotate(90deg);}
+    25%  {transform: translateX($pos1) rotate(90deg);}
+    40%  {transform: translateX($pos2) rotate(90deg);}
+    48%  {transform: translateX($pos2) rotate(90deg);}
+    70%  {transform: translateX($pos1) rotate(90deg);}
+    100% {transform: translateX($pos1) rotate(90deg);}
+  }
+  @keyframes secondCircle {
+    0%   {transform: translateX($pos2) rotate(90deg);}
+    20%  {transform: translateX($pos2) rotate(90deg);}
+    35%  {transform: translateX($pos3) rotate(90deg);}
+    58%  {transform: translateX($pos3) rotate(90deg);}
+    73%  {transform: translateX($pos2) rotate(90deg);}
+    100% {transform: translateX($pos2) rotate(90deg);}
+  }
+  @keyframes thirdCircle {
+    0%   {transform: translateX($pos3) rotate(90deg);}
+    15%  {transform: translateX($pos3) rotate(90deg);}
+    30%  {transform: translateX($pos4) rotate(90deg);}
+    63%  {transform: translateX($pos4) rotate(90deg);}
+    78%  {transform: translateX($pos3) rotate(90deg);}
+    100% {transform: translateX($pos3) rotate(90deg);}
+  }
+  @keyframes fourthCircle {
+    0%   {transform: translateX($pos4) rotate(90deg);}
+    10%  {transform: translateX($pos4) rotate(90deg);}
+    25%  {transform: translateX($pos5) rotate(90deg);}
+    68%  {transform: translateX($pos5) rotate(90deg);}
+    83%  {transform: translateX($pos4) rotate(90deg);}
+    100% {transform: translateX($pos4) rotate(90deg);}
+  }
+  @keyframes fifthCircle {
+    0%   {transform: translateX($pos5) rotate(90deg);}
+    5%   {transform: translateX($pos5) rotate(90deg);}
+    20%  {transform: translateX($pos6) rotate(90deg);}
+    73%  {transform: translateX($pos6) rotate(90deg);}
+    88%  {transform: translateX($pos5) rotate(90deg);}
+    100% {transform: translateX($pos5) rotate(90deg);}
+  }
+  @keyframes sixthCircle {
+    0%   {transform: translateX($pos6) rotate(90deg);}
+    15%  {transform: translateX($pos7) rotate(90deg);}
+    75%  {transform: translateX($pos7) rotate(90deg);}
+    90%  {transform: translateX($pos6) rotate(90deg);}
+    100% {transform: translateX($pos6) rotate(90deg);}
+  }
+}
+
+@media (max-width: 992px) {
+
+  .tokenomics-title {
+    margin: 0 0 50px 0;
+  }
+
+  .tokenomics-title img{
+    display: block;
+    width: 100%;
+    max-width: 410px;
+  }
+
+  .tokenomics .inner-wrap{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .aboutToken-infoBlock {
+    width: 50%;
+    padding: 24px 24px 24px 32px;
+  }
+
+  .aboutToken-infoBlock-title{
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .aboutToken-infoBlock-text{
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .aboutToken-infoBlock:nth-child(2){
+    border-right: none;
+  }
+
+  .aboutToken-infoBlock:nth-child(4){
+    border-left: 1px solid rgba(216, 216, 216, 0.7);
+    border-bottom: 1px solid rgba(216, 216, 216, 0.7);
+  }
+
+  .aboutToken-infoBlock:nth-child(5) {
+    border-left: none;
+    border-right: none;
+  }
+  .aboutToken-infoBlock:nth-child(6) {
+    min-height: 260px;
+    border-left: 1px solid rgba(216, 216, 216, 0.7);
+  }
+
+  .aboutToken-infoBlock .aboutToken-infoBlock-circle {
+    $step: 15%;
+
+    @for $index from 0 to 6 {
+      &:nth-child(#{$index + 1}) {
+        left: calc(50%);
+        transform: translateX(-88%  + $step * ($index));
+        animation: none
+      }
+    }
+  }
+
+}
+
+
+
+@media (max-width: 760px) {
+  .aboutToken-infoBlock-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .tokenomics .inner-wrap{
+    height: 120px;
+  }
+}
+
+@media (max-width: 650px) {
+  .tokenomics {
+    padding-top: 80px;
+  }
+
+  .tokenomics-title {
+    margin: 0 0 40px 0;
+  }
+}
+
+@media (max-width: 568px) {
+
+  .aboutToken {
+    display: block;
+  }
+
+  .tokenomics-title img{
+    max-width: 310px;
+  }
+
+  .aboutToken-infoBlock{
+    width: 100%;
+    padding: 16px 22px 18px 22px;
+  }
+
+  .aboutToken-infoBlock-circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .tokenomics .inner-wrap{
+    height: 200px;
+  }
+
+  .aboutToken-infoBlock:nth-child(2){
+    border-left: none;
+  }
+
+  .aboutToken-infoBlock:nth-child(4){
+    border-left: none;
+  }
+
+  .aboutToken-infoBlock:nth-child(6) {
+    border-left: none;
+    border-top: 1px solid rgba(216, 216, 216, 0.7);
+  }
+}
+
+@media (max-width: 410px) {
+   .tokenomics-title img {
+      max-width: 260px;
+    }
+    .tokenomics .inner-wrap{
+      height: 140px;
+    }
+
+  .aboutToken-infoBlock-circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .aboutToken-infoBlock:nth-child(6){
+    min-height: 200px;
+  }
+}

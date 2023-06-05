@@ -1,0 +1,147 @@
+@font-face {
+    font-family: GraublauWeb;
+    src: url("./assets/font/Pally-Bold.otf") format("opentype");
+}
+
+.video-loader {
+    position: fixed;
+    z-index: -1;
+}
+
+.App {
+    max-width: 1600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.App:not(.loaded) {
+    .header {
+        transform: translate(-50%, -100%);
+    }
+
+    .mainTitleBlock-widgetWrap {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+
+    .main-video {
+        opacity: 0;
+    }
+    //*new updates start
+}
+
+//.App.loaded {
+//    .descBlock {
+//         //background: black;
+//
+//        &:before {
+//            animation: anim-ramka-6 1.1s .3s linear forwards;
+//        }
+//    }
+//
+//    .descBlock-first-timer {
+//        .span:before { animation: anim-ramka-1 .8s .7s linear forwards; }
+//    }
+//}
+
+.container {
+    max-width: 1580px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.main-container {
+    padding: 0 32px;
+    overflow: hidden;
+}
+
+.no-decore {
+    text-decoration: none;
+}
+
+.header-btnWrap-btn-icon,
+.button-wrapIcon {
+    animation: 1.5s ease changeIconColor infinite alternate;
+}
+
+.button,
+.header-btnWrap-btn,
+.stepFirstBlock-description-wrapper-stepFirstBtn,
+.joinusMain-block-stay-top-subscribe-wrapper-but,
+.joinusMain-block-join-top-ticker {
+    .header-btnWrap-btn-text,
+    .button-text,
+    .stepFirstBlock-description-wrapper-stepFirstBtn-text,
+    .text,
+    .joint-telegram {
+        transition: color .3s;
+    }
+
+    &:hover {
+        .button-text,
+        .header-btnWrap-btn-text,
+        .header-btnWrap-btn-text,
+        .stepFirstBlock-description-wrapper-stepFirstBtn-text,
+        .text,
+        .joint-telegram {
+            color: #FF3BC8;
+        }
+    }
+}
+
+.purchaseSteps-stepsWrap .step .title {
+    transition: color .3s;
+
+    &:hover {
+        color: #FF3BC8;
+    }
+}
+
+.border {
+    border: 1px solid #98989c;
+    border-radius: 15px;
+}
+
+.cr-marquee-label {
+    display: none !important;
+}
+
+footer {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 65px 10px;
+}
+
+@media (max-width: 1300px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    footer {
+        padding-top: 32px;
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .main-container{
+        padding: 0 16px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding-top: 22px;
+        padding-bottom: 30px;
+    }
+}

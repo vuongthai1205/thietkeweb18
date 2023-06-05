@@ -1,0 +1,71 @@
+.icon {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: transform .6s, border .3s;
+
+  &:hover {
+    border-color: #744aeb;
+
+    img.active {
+      opacity: 1;
+    }
+  }
+
+
+
+  @keyframes rotateL {
+    to { transform: rotate(-360deg) }
+  }
+
+  @keyframes rotateR {
+    to { transform: rotate(360deg) }
+  }
+
+  &.swiper-arrow {
+    img { width: 26px; }
+  }
+
+  &:first-child {
+    &.rotate { animation: rotateL .7s; }
+    img { left: -5px; }
+  }
+  &:last-child {
+    &.rotate { animation: rotateR .7s; }
+    img { right: -5px; }
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 26px;
+    height: 38px;
+    transition: .3s;
+
+    &.active {
+      opacity: 0;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .icon {
+    width: 55px;
+    height: 55px;
+
+    &.swiper-arrow img{
+      width: 22px;
+      height: 28px;
+    }
+  }
+}

@@ -1,0 +1,399 @@
+.purchaseSteps {
+  margin: 85px auto 0;
+  position: relative;
+  //padding-top: 74px;
+  //height: 790px;
+  padding-bottom: calc(340px + 20%);
+  overflow: hidden;
+  width: calc(100% + 64px);
+  left: -32px;
+
+  $wrapperPaddingLeft: 40px;
+  $tabsCount: 7;
+
+  >*:not(:first-child) {
+    > img {
+      position: absolute;
+      left: calc(50% - ((100% / $tabsCount - $wrapperPaddingLeft) / 2));
+      top: 0;
+      height: 100%;
+      // right: 0;
+      margin: auto;
+
+      &.reverse-img {
+        right: calc(50% - ((100% / $tabsCount + $wrapperPaddingLeft) / 2));
+        left: auto;
+      }
+    }
+  }
+
+  &-stepsWrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+    //top: -90px;
+    z-index: 6;
+    padding-left: 40px;
+
+    // transform: translateY(calc(43% + -0.5px));
+    &::before {
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: calc(100% - 1px);
+      width: 40px;
+      height: 30px;
+      border-top-left-radius: 35px;
+      border-top: 1px solid rgba(#fff, .2);
+      border-left: 1px solid rgba(#fff, .2);
+      display: block;
+    }
+
+    .step {
+      //top: 18px;
+      // position: absolute;
+      width: calc(100% / 7 - 40px);
+      flex: 1 1 calc(100% / 7 - 40px);
+      background: no-repeat url('../../../../assets/images/howToBuy/tab.png') center;
+      background-size: 100% 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 5px 20px 2px;
+      border-bottom: 1px solid rgba(#fff, .1);
+      box-sizing: border-box;
+
+      &.active {
+        border-color: #000;
+      }
+
+      &:first-child {
+        position: relative;
+      }
+
+      img {
+        width: 100%;
+        pointer-events: none;
+      }
+      .title {
+        // position: absolute;
+        // width: 100px;
+        height: 62px;
+        display: flex;
+        z-index: 1;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Chakra Petch', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 62px;
+        text-transform: uppercase;
+        color: #D8D8D8;
+        cursor: pointer;
+        user-select: none;
+
+        // transform: translateX(-50%);
+      }
+      .one {
+        left: 9.5%;
+        animation: oneAnim 2.8s linear;
+      }
+      .two {
+        left: 23.5%;
+      }
+      .three {
+        left: 37.5%;
+      }
+      .four {
+        left: 51.5%;
+      }
+      .five {
+        left: 65.5%;
+      }
+      .six {
+        left: 79.6%;
+      }
+      .seven {
+        left: 93.5%;
+      }
+    }
+    .first {
+      animation: firstStepAnim 2.4s linear;
+    }
+    .seventh {
+      animation: seventhStepAnim 0.4s linear;
+    }
+    .sixth {
+      animation: sixthStepAnim 0.8s linear;
+    }
+    .fifth {
+      animation: fifthStepBlock 1.2s linear;
+    }
+    .fourth {
+      animation: fourthStepAnim 1.6s linear;
+    }
+    .third {
+      animation: thirdStepBlock 2s linear;
+    }
+    .second {
+      animation: secondStepAnim 2.4s linear;
+    }
+    .first {
+      animation: firstStepAnim 2.8s linear;
+    }
+    @keyframes firstStepAnim {
+      0% {
+        transform: translateX(calc(-1 * (100% * 1 + $wrapperPaddingLeft)));
+        -webkit-filter: blur(10px);
+      }
+      60% {
+        transform: translateX(calc(-1 * (100% * 1 + $wrapperPaddingLeft)));
+        -webkit-filter: blur(10px);
+      }
+      79% {
+        -webkit-filter: blur(10px);
+      }
+      80% {
+        left: 0;
+        -webkit-filter: blur(0px);
+      }
+    }
+    @keyframes secondStepAnim {
+      0% {
+        transform: translateX(calc(-1 * (100% * 2 + $wrapperPaddingLeft)));
+        -webkit-filter: blur(10px);
+      }
+      60% {
+        transform: translateX(calc(-1 * (100% * 2 + $wrapperPaddingLeft)));
+        -webkit-filter: blur(10px);
+      }
+      79% {
+        -webkit-filter: blur(10px);
+      }
+      80% {
+        transform: translateX(0);
+        -webkit-filter: blur(0px);
+      }
+    }
+    @keyframes thirdStepBlock {
+      0% {
+        transform: translateX(calc(-1 * (100% * 3 + $wrapperPaddingLeft)));
+        -webkit-filter: blur(10px);
+      }
+      60% {
+        transform: translateX(calc(-1 * (100% * 3 + $wrapperPaddingLeft)));
+        -webkit-filter: blur(10px);
+      }
+      79% {
+        -webkit-filter: blur(10px);
+      }
+      80% {
+        transform: translateX(0);
+        -webkit-filter: blur(0px);
+      }
+    }
+    @keyframes fourthStepAnim {
+      0% {
+        transform: translateX(calc(-1 * (100% * 4 + $wrapperPaddingLeft)));
+        -webkit-filter: blur(10px);
+      }
+      60% {
+        transform: translateX(calc(-1 * (100% * 4 + $wrapperPaddingLeft)));
+        -webkit-filter: blur(10px);
+      }
+      79% {
+        -webkit-filter: blur(10px);
+      }
+      80% {
+        transform: translateX(0);
+        -webkit-filter: blur(0px);
+      }
+    }
+    @keyframes fifthStepBlock {
+      0% {
+        transform: translateX(calc(-1 * (100% * 5 + $wrapperPaddingLeft)));
+        -webkit-filter: blur(10px);
+      }
+      60% {
+        transform: translateX(calc(-1 * (100% * 5 + $wrapperPaddingLeft)));
+        -webkit-filter: blur(10px);
+      }
+      89% {
+        -webkit-filter: blur(10px);
+      }
+      90% {
+        transform: translateX(0);
+        -webkit-filter: blur(0px);
+      }
+    }
+    @keyframes sixthStepAnim {
+      0% {
+        transform: translateX(calc(-1 * (100% * 6 + $wrapperPaddingLeft)));
+        -webkit-filter: blur(10px);
+      }
+      50% {
+        transform: translateX(calc(-1 * (100% * 6 + $wrapperPaddingLeft)));
+        -webkit-filter: blur(10px);
+      }
+      99% {
+        -webkit-filter: blur(10px);
+      }
+      100% {
+        transform: translateX(0);
+        -webkit-filter: blur(0px);
+      }
+    }
+    @keyframes seventhStepAnim {
+      0% {
+        transform: translateX(calc(-1 * (100% * 7 + $wrapperPaddingLeft)));
+        -webkit-filter: blur(10px);
+      }
+      99% {
+        -webkit-filter: blur(10px);
+      }
+      100% {
+        transform: translateX(0);
+        -webkit-filter: blur(0px);
+        animation-fill-mode: none !important;
+      }
+    }
+    @keyframes firstStepAnim {
+      0% {
+        transform: translateX(calc(-1 * (100% * 1 + $wrapperPaddingLeft)));
+        -webkit-filter: blur(10px);
+      }
+      60% {
+        transform: translateX(calc(-1 * (100% * 1 + $wrapperPaddingLeft)));
+        -webkit-filter: blur(10px);
+      }
+      79% {
+        -webkit-filter: blur(10px);
+      }
+      80% {
+        transform: translateX(0);
+        -webkit-filter: blur(0px);
+      }
+    }
+  }
+
+  > *:not(:first-child) {
+    border-top-left-radius: 35px;
+    overflow: hidden;
+    height: calc(100% - 70px);
+
+    &:not(.start-show):not(.active) {
+      visibility: hidden;
+    }
+  }
+}
+
+
+@media (max-width: 1300px) {
+  .purchaseSteps-stepsWrap .step .title{
+    height: 42px;
+    font-size: 20px;
+    line-height: 28px;
+    // top: 15%;
+    // font-size: 14px;
+    // line-height: 24px;
+  }
+
+  .purchaseSteps {
+    padding-bottom: calc(300px + 20%);
+
+    > *:not(:first-child) {
+      height: calc(100% - 40px);
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+
+  .purchaseSteps {
+    margin-top: 50px;
+    padding-bottom: calc(230px + 20%);
+  }
+
+  // .purchaseSteps > *:not(:first-child) > img{
+  //   right: 5%;
+  // }
+
+  .purchaseSteps-stepsWrap .step .title{
+    font-size: 12px;
+    line-height: 18px;
+    height: 28px;
+  }
+
+}
+
+@media (max-width: 760px) {
+  .purchaseSteps {
+    height: 664px;
+  }
+
+  .purchaseSteps > *:not(:first-child) > img {
+    // position: static;
+    height: auto;
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.reverse-img {
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .purchaseSteps{
+    left: -16px;
+    margin-top: 40px;
+    width: calc(100% + 32px);
+  }
+  .purchaseSteps-stepsWrap .step .title {
+    top: 10%;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .purchaseSteps-stepsWrap{
+    padding-left: 20px;
+  }
+
+  .purchaseSteps-stepsWrap::before{
+    width: 20px;
+  }
+
+  .purchaseSteps-stepsWrap .step{
+    position: relative;
+    width: calc(100% / 7 - 20px);
+  }
+
+  .purchaseSteps > *:not(:first-child) > img {
+    right: auto;
+    left: 0;
+
+    &.reverse-img {
+      right: auto;
+      left: 0;
+    }
+  }
+}
+
+
+
+@media (max-width: 568px) {
+  .purchaseSteps-stepsWrap .step {
+    background-image: url('../../../../assets/images/howToBuy/tab-mobile.png');
+  }
+}
+
+@media (max-width: 410px) {
+
+}

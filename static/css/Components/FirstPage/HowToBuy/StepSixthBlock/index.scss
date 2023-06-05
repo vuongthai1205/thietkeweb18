@@ -1,0 +1,191 @@
+.stepSixthBlock {
+  display: flex;
+  height: 720px;
+  background: black;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  animation: animSixthBlock 0.8s linear;
+
+  &-description {
+    font-family: 'Chakra Petch',sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    //z-index: 1;
+
+    &-wrapper {
+      max-width: 550px;
+      &-title {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 42px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+      }
+      &-text {
+        font-weight: 300;
+        font-size: 23px;
+        line-height: 34px;
+        color: rgba(255, 255, 255, 0.85);
+        margin: 12px 0 32px 0;
+      }
+      &-dopText {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+      }
+    }
+  }
+  &-video{
+    max-width: 50%;
+  }
+}
+
+@keyframes animSixthBlock {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+    -webkit-filter: blur(10px);
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-100%);
+    -webkit-filter: blur(10px);
+  }
+  99% {
+    -webkit-filter: blur(10px);
+  }
+  100% {
+    transform: translateX(0);
+    -webkit-filter: blur(0px);
+  }
+}
+
+
+
+
+@media (max-width: 1400px) {
+  .stepSixthBlock-description {
+    padding: 0 25px;
+  }
+
+  .stepSixthBlock-video{
+    max-width: 38%;
+  }
+
+  .stepSixthBlock-description{
+    padding: 0 32px 0 60px;
+    max-width: 62%;
+  }
+
+
+}
+@media (max-width: 1400px) and (min-width: 650px) { 
+  .purchaseSteps > *:not(:first-child) > img.stepSixthBlock-separation {
+    right: calc(50% + (100% / 7 + 40px) / 2);;
+    left: auto;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .stepSixthBlock {
+    height: 410px;
+  }
+
+  
+
+
+  .stepSixthBlock-description-wrapper{
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+
+  .stepSixthBlock-description-wrapper-title{
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .stepSixthBlock-description-wrapper-text{
+    font-size: 16px;
+    line-height: 24px;
+    margin: 5px 0 20px;
+  }
+
+  .stepSixthBlock-description-wrapper-stepFirstBtn{
+    padding: 14px 13px 14px 24px;
+    max-width: 264px;
+  }
+
+  .stepSixthBlock-description-wrapper-stepFirstBtn-text{
+    font-size: 15px;
+  }
+
+  .stepSixthBlock-description-wrapper-stepFirstBtn-wrapIcon{
+    width: 32px;
+    height: 32px;
+    min-width: 0;
+  }
+
+  .stepSixthBlock-description-wrapper-stepFirstBtn-wrapIcon img{
+    max-width: 14px;
+  }
+  
+}
+
+@media (max-width: 760px) {
+  .stepSixthBlock {
+    height: 620px;
+    flex-direction: column-reverse;
+  }
+
+  .stepSixthBlock-description{
+    max-width: 100%;
+    height: 50%;
+  }
+
+  .stepSixthBlock-video{
+    max-width: 100%;
+    height: 50%;
+  }
+
+  .stepSixthBlock-description-wrapper-stepFirstBtn-text {
+    font-size: 14px;
+    line-height: 16px;
+    margin-right: 16px;
+}
+
+  .stepSixthBlock-description-wrapper-stepFirstBtn-wrapIcon{
+    width: 54px;
+    height: 54px;
+    min-width: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%)
+  }
+  
+
+  .stepSixthBlock-description-wrapper-stepFirstBtn-wrapIcon img{
+    max-width: 24px;
+  }
+
+  .stepSixthBlock-description-wrapper-stepFirstBtn {
+    padding: 20px 40px 20px 38px;
+  }
+}
+
+@media (max-width: 568px) {
+  .stepSixthBlock-description {
+    padding: 0 18px 0 22px;
+  }
+}

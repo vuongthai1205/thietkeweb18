@@ -1,0 +1,348 @@
+.tokenSupply {
+  display: flex;
+  border: 1px solid rgba(216, 216, 216, 0.7);
+  border-radius: 16px;
+  background: black;
+  width: 100%;
+  margin: 20px auto 0;
+  height: 544px;
+  box-sizing: border-box;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../../../assets/images/star-bg.png') no-repeat;
+    background-size: cover;
+  }
+
+  &-tokenCount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border-right: 1px solid rgba(216, 216, 216, 0.7);
+    padding-top: 46px;
+    overflow: hidden;
+
+    video {
+      max-height: 445px;
+    }
+
+    .title {
+      font-family: 'Chakra Petch', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 42px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+  }
+  &-infoToken {
+    width: 50%;
+
+    &-price {
+      display: flex;
+      height: 50%;
+      border-bottom: 1px solid rgba(216, 216, 216, 0.7);;
+
+      .buy {
+        width: 50%;
+        padding: 37px 0 40px 40px;
+        border-right: 1px solid rgba(216, 216, 216, 0.7);;
+        .title {
+          font-family: 'Chakra Petch', sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 28px;
+          line-height: 42px;
+          text-transform: uppercase;
+          color: #FFFFFF;
+        }
+        .text {
+          font-family: 'Space Grotesk', sans-serif;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 21px;
+          line-height: 32px;
+          color: #FFFFFF;
+          opacity: 0.85;
+        }
+      }
+      .sell {
+        padding: 37px 0 40px 40px;
+        width: 50%;
+        .title {
+          font-family: 'Chakra Petch', sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 28px;
+          line-height: 42px;
+          text-transform: uppercase;
+          color: #FFFFFF;
+        }
+        .text {
+          font-family: 'Space Grotesk', sans-serif;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 21px;
+          line-height: 32px;
+          color: #FFFFFF;
+          opacity: 0.85;
+        }
+      }
+    }
+    &-contactAddress {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 50%;
+      justify-content: center;
+
+      .svg {
+        g {
+          fill: white;
+          stroke: white;
+        }
+        path {
+          fill: white;
+          stroke: white;
+        }
+
+      }
+      .title {
+        font-family: 'Chakra Petch', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 42px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+      }
+      .address {
+        font-family: 'Chakra Petch', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 42px;
+        text-transform: uppercase;
+        color: #FF3BC8;
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:before {
+          content: "Copied";
+          position: absolute;
+          top: 50%;
+          color: white;
+          font-size: 14px;
+          left: -100%;
+          right: -100%;
+          margin: auto;
+          width: fit-content;
+          opacity: 0;
+          transform: translateY(0);
+          transition: opacity, transform;
+          transition-duration: 0.3s;
+        }
+
+        &.copied:before {
+          opacity: 1;
+          transform: translateY(10px);
+        }
+      }
+    }
+  }
+}
+
+.tokenSupply {
+  .tokenSupply-tokenCount .title,
+  .tokenSupply-tokenCount video,
+  .buy .title, .buy .text,
+  .sell .title, .sell .text,
+  .tokenSupply-infoToken-contactAddress .title,
+  .tokenSupply-infoToken-contactAddress .address {
+    transition: opacity, transform;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .tokenSupply-tokenCount { .title, video { transition-delay: .2s; }}
+  .buy { .title, .text { transition-delay: .4s; }}
+  .sell { .title, .text { transition-delay: .6s; }}
+  .tokenSupply-infoToken-contactAddress { .title, .address { transition-delay: .8s; }}
+}
+
+.tokenSupply:not(.show) {
+  .tokenSupply-tokenCount .title,
+  .tokenSupply-tokenCount video,
+  .buy .title, .buy .text,
+  .sell .title, .sell .text,
+  .tokenSupply-infoToken-contactAddress .title,
+  .tokenSupply-infoToken-contactAddress .address {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+.tokenSupply-shapeBox{
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(216, 216, 216, 0.7);
+}
+.tokenSupply-shape {
+  display: block;
+  max-width: 100%;
+}
+
+@media (max-width: 1500px) {
+
+  .tokenSupply {
+    height: auto;
+  }
+
+  .tokenSupply-infoToken-price{
+    height: auto;
+  }
+
+  .tokenSupply-infoToken-price .sell, .tokenSupply-infoToken-price .buy{
+    padding: 37px 0 40px 30px;
+  }
+
+  .tokenSupply-infoToken-contactAddress .address{
+    font-size: 22px;
+  }
+}
+
+
+
+@media (max-width: 1300px) {
+
+
+  .tokenSupply {
+    display: block;
+  }
+
+  .tokenSupply-tokenCount{
+    width: 100%;
+    border-right: none;
+  }
+  .tokenSupply-infoToken {
+    width: 100%;
+  }
+  .tokenSupply-infoToken-price{
+    border-top: 1px solid rgba(216, 216, 216, 0.7);
+  }
+  .tokenSupply-infoToken-contactAddress{
+    padding: 50px 5px 80px;
+  }
+  .tokenSupply-infoToken-contactAddress .title{
+    margin-bottom: 17px;
+  }
+
+  .tokenSupply-infoToken-contactAddress .address{
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .tokenSupply-tokenCount{
+    padding-top: 22px;
+    border-right: none;
+  }
+
+  .tokenSupply-tokenCount video{
+    height: 49vw;
+    max-height: 420px;
+    object-fit: cover;
+  }
+
+  .tokenSupply-infoToken-price .sell, .tokenSupply-infoToken-price .buy{
+    padding: 24px 24px 24px 30px;
+  }
+
+  .tokenSupply-infoToken-price .sell .title, .tokenSupply-infoToken-price .buy .title{
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 5px;
+  }
+
+  .tokenSupply-infoToken-price .sell .text, .tokenSupply-infoToken-price .buy .text{
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 760px) {
+  .tokenSupply-infoToken-contactAddress .address {
+    font-size: 18px;
+  }
+  .tokenSupply-infoToken {
+    display: flex;
+  }
+
+  .tokenSupply-infoToken-price{
+    display: block;
+    border-right: 1px solid rgba(216, 216, 216, 0.7);
+    border-bottom: none;
+    flex: 0 0 calc(100% - 134px);
+  }
+  .tokenSupply-infoToken-price .buy{
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(216, 216, 216, 0.7);
+  }
+  .tokenSupply-infoToken-price .sell {
+    width: 100%;
+  }
+
+  .tokenSupply-shapeBox {
+    flex: 0 0 134px;
+  }
+
+  .tokenSupply-infoToken-contactAddress{
+    display: none;
+  }
+}
+
+@media (max-width: 568px) {
+  .tokenSupply-tokenCount .title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .tokenSupply-infoToken-price .buy, .tokenSupply-infoToken-price .sell {
+    padding: 16px 20px 16px 21px;
+  }
+}
+
+@media (max-width: 410px) {
+
+  .tokenSupply-tokenCount .title {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .tokenSupply-infoToken-price .sell, .tokenSupply-infoToken-price .buy {
+    padding: 16px 16px 16px 18px;
+  }
+
+  .tokenSupply-infoToken-price{
+    flex: 0 0 calc(100% - 110px);
+  }
+
+  .tokenSupply-shapeBox {
+    flex: 0 0 110px;
+  }
+
+}

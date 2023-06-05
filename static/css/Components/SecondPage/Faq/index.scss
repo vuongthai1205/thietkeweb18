@@ -1,0 +1,882 @@
+.faqMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 180px;
+    position: relative;
+    // overflow: hidden;
+
+    &-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 0;
+
+        &-image{
+            padding: 0 80px;
+            max-width: 500px;
+
+            &-pic {
+                display: block;
+                max-width: 100%;
+            }
+        }
+
+        &-zibu {
+            position: relative;
+            text-transform: uppercase;
+            color: #fff;
+            background: url("../../../assets/images/mainBlock/noizeBG.png");
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            flex: 0 0 auto;
+            width: 175px;
+            height: 175px;
+            border-radius: 50%;
+            font-size: 32px;
+            cursor: pointer;
+            transition: .3s all ease-in-out;
+
+            &:hover {
+                color: #FF3BC8;
+            }
+        }
+
+        &-zibuActive {
+            position: relative;
+            text-transform: uppercase;
+            color: #fff;
+            background: url("../../../assets/images/mainBlock/noizeBG.png");
+            background-color: #000;
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            width: 175px;
+            height: 175px;
+            border-radius: 50%;
+            font-size: 32px;
+            cursor: pointer;
+            animation: 0.8s linear scaleButtonZibu;
+        }
+
+        @keyframes scaleButtonZibu {
+            0% {
+                border: 1px solid #98989C;
+            }
+
+            50% {
+                border: 1px solid transparent;
+                transform: scale(0.7);
+                background-color: #FF3BC8;
+            }
+
+            100% {
+                border: 1px solid #98989C;
+                transform: scale(1);
+            }
+        }
+
+        &-lms {
+            position: relative;
+            text-transform: uppercase;
+            color: #fff;
+            background: url("../../../assets/images/mainBlock/noizeBG.png");
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            flex: 0 0 auto;
+            width: 175px;
+            height: 175px;
+            border-radius: 50%;
+            font-size: 32px;
+            cursor: pointer;
+            transition: .3s all ease-in-out;
+
+            &:hover {
+                color: #FF3BC8;
+            }
+        }
+
+        &-lmsActive {
+            position: relative;
+            text-transform: uppercase;
+            color: #fff;
+            background: url("../../../assets/images/mainBlock/noizeBG.png");
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            width: 175px;
+            height: 175px;
+            flex: 0 0 auto;
+            border-radius: 50%;
+            font-size: 32px;
+            cursor: pointer;
+            animation: 0.8s linear scaleButtonLms;
+        }
+
+        @keyframes scaleButtonLms {
+            0% {
+                border: 1px solid #98989C;
+            }
+
+            50% {
+                border: 1px solid transparent;
+                transform: scale(0.7);
+                background-color: #FF3BC8;
+            }
+
+            100% {
+                border: 1px solid #98989C;
+                transform: scale(1);
+            }
+        }
+    }
+
+    .faqMain-text img {
+        max-width: 100%;
+        transition: transform, opacity, filter;
+        transition-duration: 1.5s;
+        transition-delay: 0.2s;
+        transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .faqMain-wrapper {
+        transition: opacity 1s;
+        transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .faqMain-wrapper-zibu, .faqMain-wrapper-lms {
+        transition: transform 1s;
+        transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    &:not(.show) {
+        .faqMain-text img {
+            filter: blur(20px);
+            opacity: 0;
+            transform: scale(1.2);
+        }
+
+        .faqMain-wrapper {
+            opacity: 0;
+        }
+
+        .faqMain-wrapper-zibu {
+            transform: translateX(120px);
+        }
+
+        .faqMain-wrapper-lms {
+            transform: translateX(-120px);
+        }
+    }
+}
+
+
+.text {
+    position: relative;
+}
+
+.textLong {
+    position: relative;
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.textLongActive {
+    position: relative;
+    color: #000;
+    font-weight: 600;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.faqMain-wrapper-zibu,
+.faqMain-wrapper-lms {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 600;
+    transition: color .3s;
+
+    &:hover {
+        color: #FF3BC8;
+    }
+}
+
+.modalWindowActive {
+    pointer-events: auto !important;
+    display: flex;
+    gap: 28px;
+    position: absolute;
+    top: 530px;
+    opacity: 1;
+    transform: translateY(-400px);
+    transition: 1s all ease;
+    z-index: 1;
+    height: 690px;
+}
+
+.modalWindow {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    transition: 1s all ease;
+    opacity: 0;
+    z-index: -1;
+    height: 720px;
+
+    &-left {
+        border-radius: 16px;
+        border: 1px solid #98989C;
+        display: flex;
+        // align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: url("../../../assets/images/mainBlock/noizeBG.png");
+        background-color: #000;
+        height: 100%;
+
+        &-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+            gap: 16px;
+            padding: 20px;
+            border-bottom: 1px solid #98989C;
+            text-transform: uppercase;
+
+            &-buttonZibu {
+                color: #fff;
+                padding: 25px 80px;
+                border-radius: 1000px;
+                background-color: #000;
+                cursor: pointer;
+                position: relative !important;
+            }
+
+            &-buttonZibuActive {
+                padding: 25px 80px;
+                border-radius: 1000px;
+                border: 1px solid transparent;
+                cursor: pointer;
+                color: #000;
+                background-color: #FF3BC8;
+                position: relative;
+            }
+
+
+            &-buttonLms {
+                color: #fff;
+                padding: 25px 80px;
+                border-radius: 1000px;
+                background-color: #000;
+                cursor: pointer;
+                position: relative;
+            }
+
+            &-buttonLmsActive {
+                padding: 25px 80px;
+                border-radius: 1000px;
+                border: 1px solid transparent;
+                cursor: pointer;
+                color: #000;
+                background-color: #FF3BC8;
+                position: relative;
+            }
+        }
+
+        &-images {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            padding: 60px 50px 10px;
+            // gap: 50px;
+
+            &-imageQuestion {
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+                img {
+                    display: block;
+                    max-width: 100%;
+                }
+            }
+
+            &-imageDog {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    display: block;
+                    max-width: 290px;
+                }
+            }
+        }
+    }
+
+    &-second {
+        // display: flex;
+        // align-items: flex-start;
+        // justify-content: flex-start;
+        // flex-direction: column;
+        border: 1px solid #98989C;
+        border-radius: 16px;
+        height: 100%;
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+        background: url("../../../assets/images/mainBlock/noizeBG.png");
+        background-color: #000;
+
+        &-buttonsMob {
+            display: none;
+        }
+
+        &-block {
+            display: flex;
+            width: 100%;
+            min-height: 262px;
+
+            &-left {
+                display: flex;
+                flex-direction: column;
+                // height: 100%;
+                flex: 0 0 184px;
+
+                &-cell {
+                    padding: 5px;
+                    flex: 1 1 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:first-child {
+                        border-bottom: 1px solid #98989C;
+                    }
+                }
+
+                &-topImage {
+
+                }
+
+                &-bottomImage {
+
+                }
+
+            }
+
+            &-right {
+                flex: 1 1 auto;
+                color: #fff;
+                border-left: 1px solid #98989C;
+                // height: 100%;
+
+                &-texts {
+                    padding: 30px 60px 24px 64px;
+
+                    &-title {
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 38px;
+                        text-transform: uppercase;
+                        margin-bottom: 20px;
+                        font-family: 'Chakra Petch', sans-serif;
+                    }
+
+                    &-text {
+                        font-family: 'Space Grotesk', sans-serif;
+                        font-weight: 300;
+                        font-size: 23px;
+                        line-height: 34px;
+                    }
+
+                    &-link {
+                        text-decoration: none;
+                        font-weight: 500;
+                        color: #fff;
+
+                        &:hover {
+                            color: #ff3bc8;
+                        }
+                    }
+
+                }
+            }
+
+
+        }
+    }
+
+    &-second-block:not(:last-child) {
+        border-bottom: 1px solid #98989C;
+    }
+
+    &-second::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+}
+
+
+.gradient-border {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    bottom: 0;
+    left: -1px;
+    z-index: 0;
+    height: 100%;
+    padding: 1px;
+    width: 100%;
+    border-radius: 50%;
+    background: linear-gradient(to right, #98989C, transparent);
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        bottom: 1px;
+        left: 1px;
+        z-index: 0;
+        border-radius: 50%;
+        background: url("../../../assets/images/mainBlock/noizeBG.png");
+        background-color: black;
+    }
+}
+
+.gradient-borderLong {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    bottom: 0;
+    left: -1px;
+    z-index: 0;
+    height: 100%;
+    padding: 1px;
+    width: 100%;
+    border-radius: 1000px;
+    background: linear-gradient(to right, #98989C, transparent);
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        bottom: 1px;
+        left: 1px;
+        z-index: 0;
+        border-radius: 1000px;
+        background-color: black;
+    }
+}
+
+.gradient-borderLongActive {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    bottom: 0;
+    left: -1px;
+    z-index: 0;
+    height: 100%;
+    padding: 1px;
+    width: 100%;
+    border-radius: 1000px;
+    background: linear-gradient(to right, #98989C, transparent);
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        bottom: 1px;
+        left: 1px;
+        z-index: 0;
+        border-radius: 1000px;
+        background-color: #FF3BC8;
+    }
+}
+
+@media (max-width: 1400px) {
+    .modalWindowActive {
+        gap: 14px;
+    }
+    .modalWindow {
+        &-left {
+            &-images {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &-buttons {
+                padding: 20px 10px;
+
+                &-buttonZibu {
+                    padding: 25px 50px;
+                }
+
+                &-buttonZibuActive {
+                    padding: 25px 50px;
+                }
+
+                &-buttonLms {
+                    padding: 25px 50px;
+                }
+
+                &-buttonLmsActive {
+                    padding: 25px 50px;
+                }
+            }
+            .textLong {
+                font-size: 16px;
+            }
+            .textLongActive {
+                font-size: 16px;
+
+            }
+        }
+
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .modalWindow-second-block-right-texts-title {
+        line-height: 30px;
+        font-size: 20px;
+
+    }
+    .modalWindow-second-block-right-texts-text {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    // .faqMain-wrapper-image-pic {
+    //     max-width: 380px;
+    // }
+}
+
+
+@media (max-width: 992px) {
+    .modalWindowActive {
+        position: fixed;
+        top: 100px;
+        transform: none;
+        z-index: 7;
+        left: 32px;
+        width: calc(100% - 64px);
+        height: calc(100% - 110px);
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .faqMain-text{
+        max-width: 146px;
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+
+
+    .modalWindow {
+        position: absolute;
+        top: 300px;
+        flex-direction: column;
+        display: none;
+
+        &-left {
+            display: none;
+        }
+
+        &-second {
+            height: 100%;
+            overflow: auto;
+            width: 100%;
+            padding-top: 145px;
+
+
+            &-buttonsMob {
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid #98989C;
+                width: 100%;
+                justify-content: space-between;
+                padding: 32px;
+                gap: 15px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: url("../../../assets/images/mainBlock/noizeBG.png");
+                background-color: #000;
+                border: 1px solid #98989C;
+                border-radius: 16px 16px 0 0;
+
+
+                &-buttonMobZibu {
+                    text-align: center;
+                    color: #fff;
+                    padding: 25px 80px;
+                    border-radius: 1000px;
+                    background-color: #000;
+                    // border: 1px solid #98989C;
+                    cursor: pointer;
+                    width: 100%;
+                    text-transform: uppercase;
+                    position: relative;
+                }
+
+                &-buttonMobZibuActive {
+                    text-align: center;
+                    padding: 25px 80px;
+                    border-radius: 1000px;
+                    // border: 1px solid transparent;
+                    cursor: pointer;
+                    color: #000;
+                    background-color: #FF3BC8;
+                    width: 100%;
+                    text-transform: uppercase;
+                    position: relative;
+
+                }
+
+                &-buttonMobLms {
+                    text-align: center;
+                    color: #fff;
+                    padding: 25px 80px;
+                    border-radius: 1000px;
+                    background-color: #000;
+                    cursor: pointer;
+                    width: 100%;
+                    text-transform: uppercase;
+                    position: relative;
+
+                }
+
+                &-buttonMobLmsActive {
+                    text-align: center;
+                    padding: 25px 80px;
+                    border-radius: 1000px;
+                    // border: 1px solid transparent;
+                    cursor: pointer;
+                    color: #000;
+                    background-color: #FF3BC8;
+                    width: 100%;
+                    text-transform: uppercase;
+                    position: relative;
+
+                }
+            }
+
+
+            &-block {
+                display: block;
+                min-height: 0;
+
+                &-left {
+                    // width: 100%;
+                    padding: 27px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #98989C;
+
+                    &-cell{
+                        flex: 0 0 auto;
+
+                        &:first-child {
+                            border-bottom: initial;
+                        }
+                    }
+
+                    &-topImage {
+                        height: 46px;
+                    }
+
+                    &-bottomImage {
+                        height: 46px;
+                    }
+                }
+
+                &-right {
+                    &-texts {
+                        padding: 24px 27px 26px 32px;
+                    }
+                }
+            }
+        }
+    }
+
+    .faqMain {
+        padding-top: 100px;
+    }
+
+    .faqMain-text {
+        max-width: 170px;
+    }
+
+    .faqMain-wrapper {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 900px) {
+
+
+    .faqMain-wrapper-image {
+        padding: 0 50px;
+    }
+
+    .faqMain-wrapper-zibu, .faqMain-wrapper-lms, .faqMain-wrapper-lmsActive, .faqMain-wrapper-zibuActive {
+        width: 124px;
+        height: 124px;
+    }
+}
+
+@media (max-width: 768px) {
+    .faqMain {
+        &-wrapper {
+            gap: 20px;
+
+            &-image {
+                // img {
+                //     width: 280px;
+                //     height: 280px;
+                // }
+
+                &-pic {
+
+                }
+            }
+
+            &-zibu {
+                padding: 20px;
+                font-size: 20px;
+            }
+
+            &-zibuActive {
+                padding: 20px;
+                font-size: 20px;
+
+            }
+
+            &-lms {
+                padding: 20px;
+                font-size: 20px;
+
+            }
+
+            &-lmsActive {
+                padding: 20px;
+                font-size: 20px;
+
+            }
+        }
+    }
+
+
+    // .faqMain-wrapper-image-pic {
+    //     max-width: 310px;
+    // }
+    .textLong, .textLongActive{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .modalWindow-second {
+        padding-top: 132px;
+    }
+
+    .modalWindow-second-buttonsMob-buttonMobZibu, .modalWindow-second-buttonsMob-buttonMobZibuActive, .modalWindow-second-buttonsMob-buttonMobLms, .modalWindow-second-buttonsMob-buttonMobLmsActive {
+        padding: 21px;
+    }
+    .faqMain-wrapper-image {
+        padding: 0 20px;
+        flex: 1 1 calc(100% - 124px * 2);
+    }
+    .modalWindow-second-block-right-texts-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .modalWindow-second-block-right-texts-title{
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .faqMain-text{
+        max-width: 110px;
+    }
+
+    .modalWindowActive{
+    //     top: 50px;
+        left: 15px;
+        width: calc(100% - 30px);
+    }
+
+    .modalWindow-second {
+        padding-top: 116px;
+    }
+
+    .modalWindow-second-block-left {
+        padding: 17px;
+    }
+
+
+    .faqMain-wrapper-image{
+        max-width: 310px;
+    }
+
+    .modalWindow-second-block-right-texts {
+        padding: 16px 13px 16px 22px;
+    }
+
+    .modalWindow-second-buttonsMob{
+        padding: 24px 15px;
+    }
+
+    .faqMain-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .faqMain-wrapper-zibu, .faqMain-wrapper-lms, .faqMain-wrapper-lmsActive, .faqMain-wrapper-zibuActive {
+        padding: 10px;
+        font-size: 32px;
+        width: 175px;
+        height: 175px;
+    }
+}

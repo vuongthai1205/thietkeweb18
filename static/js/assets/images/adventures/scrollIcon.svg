@@ -1,0 +1,28 @@
+var _path;
+var _excluded = ["title", "titleId"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+import * as React from "react";
+function SvgScrollIcon(_ref, svgRef) {
+  var title = _ref.title,
+    titleId = _ref.titleId,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    width: 477,
+    height: 91,
+    viewBox: "0 0 477 91",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _path || (_path = /*#__PURE__*/React.createElement("path", {
+    d: "M0.709922 77.6587V66.2603H15.476V73.1253L20.398 78.0473H48.6349L53.816 72.8662V56.1572L48.7644 51.1057H14.3103L0.968976 37.8939V13.6724L14.3103 0.33111H54.2046L67.5458 13.6724V25.2003H52.7798V18.2058L47.7282 13.2838H20.7866L15.7351 18.2058V33.231L20.7866 38.153H55.2408L68.5821 51.4943V77.3997L54.9817 91H14.0512L0.709922 77.6587ZM82.8179 76.3635V14.9677L97.4544 0.33111H139.939L154.317 14.7086V26.6251H139.292V20.0192L132.427 13.2838H105.226L97.843 20.5373V70.7938L105.226 78.0473H132.427L139.292 71.3119V64.706H154.317V76.6225L139.939 91H97.4544L82.8179 76.3635ZM236.885 61.7269V91H221.86V65.3537L212.534 55.121H183.002V91H167.977V0.33111H223.155L236.367 13.6724V41.5207L226.912 50.9762L236.885 61.7269ZM183.002 42.6864H216.42L221.601 37.5054V18.2058L216.42 13.0248H183.002V42.6864ZM253.075 76.3635V14.9677L267.712 0.33111H312.528L327.164 14.9677V76.3635L312.528 91H267.712L253.075 76.3635ZM304.756 78.0473L312.139 70.7938V20.5373L304.756 13.2838H275.483L268.1 20.5373V70.7938L275.483 78.0473H304.756ZM344.053 0.33111H359.078V78.1768H404.671V91H344.053V0.33111ZM415.647 0.33111H430.672V78.1768H476.265V91H415.647V0.33111Z",
+    fill: "white"
+  })));
+}
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgScrollIcon);
+export default __webpack_public_path__ + "static/media/scrollIcon.84f8cbf707a1c1420554bf6374c197fd.svg";
+export { ForwardRef as ReactComponent };

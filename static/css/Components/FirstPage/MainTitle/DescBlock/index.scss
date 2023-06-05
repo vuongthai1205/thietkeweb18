@@ -1,0 +1,561 @@
+.border {
+  //position: relative;
+  //width: 200px;
+  //height: 200px;
+  //margin: 30px auto;
+  //box-sizing: border-box;
+  //overflow: hidden;
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+    z-index: -1;
+    transform:rotate(180deg);
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 6px;
+      background: #BFE2FF;
+      transform-origin: left;
+      animation: anim-ramka-4 4s linear;
+    }
+  }
+  @keyframes anim-ramka-4 {
+    0% {
+      transform:scaleX(0);
+    }
+    100% {
+      transform:scaleX(1);
+    }
+  }
+}
+.descBlock {
+  position: absolute;
+  display: flex;
+   background: black;
+  //background: url("../../../../assets/images/mainBlock/descBG.png");
+  z-index: 1;
+  user-select: none;
+  //animation-delay: 2s;
+  //animation-duration: 1.5s;
+  //animation: animBG 1.5s linear;
+  top: -4px;
+  transition: background-color .4s .3s;
+
+  &:after {
+    transition: opacity 1.5s .7s;
+  }
+
+  @keyframes animBG {
+    0% { background: transparent; }
+    100% { background: black; }
+  }
+
+
+  &-first {
+    width: 227px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform-origin: top;
+      width: 1px;
+      height: 100%;
+      background: #98989C;
+      transition: transform .6s .8s;
+    }
+
+    &-timer {
+      display: flex;
+      padding: 41px 0;
+      font-family: "Chakra Petch", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      white-space: nowrap;
+      position: relative;
+
+      .timeWrap {
+        overflow: hidden;
+        position: relative;
+        height: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .time {
+          position: absolute;
+          transition: transform .8s 1s;
+        }
+      }
+
+      .span {
+        position: absolute;
+        width: 227px;
+        height: 112px;
+        top: 0;
+        left: 0;
+        transform: rotate(180deg);
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background: #BFE2FF;
+          transform-origin: left;
+          transform:scaleX(0);
+          //animation: anim-ramka-1 2s linear;
+        }
+      }
+
+      @keyframes anim-ramka-1 {
+        0% {
+          transform:scaleX(0);
+        }
+        100% {
+          transform:scaleX(1);
+        }
+      }
+    }
+    &-timer:before {
+      //content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(to bottom, #D8D8D8 100%, #D8D8D8 100%);
+      background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+      background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+      animation: anim-rightBorder 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
+      animation-play-state: running;
+
+    }
+
+    &-videoWrap {
+      height: calc(100% - 112px);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: opacity .3s;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 1px;
+        background: #98989C;
+        transform-origin: right;
+        transition: transform .6s .8s;
+      }
+
+      &-video {
+        //animation-duration: 3.5s;
+        //animation-name: scaleOval;
+        //transform: scale(0);
+        transition: transform 1.6s;
+
+        @keyframes scaleOval {
+          from {
+            transform: scale(0);
+          }
+          to {
+            transform: scale(1);
+          }
+        }
+      }
+
+      .video2Wrap {
+        position: absolute;
+        animation: 4s linear;
+
+        @keyframes opacityOval {
+          0% {
+            opacity: 0
+          }
+          99% {
+            opacity: 0
+          }
+          100% {
+            opacity: 1
+          }
+        }
+        .video2 {
+          //animation-delay: 3.5s;
+          opacity: 0;
+          display: block;
+
+          &.videoVisible {
+            opacity: 1;
+            animation: scaleInfOval 1.5s linear infinite
+          };
+
+          @keyframes scaleInfOval {
+            0% {
+              transform: scale(0.86);
+            }
+            100% {
+              transform: scale(1);
+            }
+            //100% {
+            //  transform: scale(1);
+            //}
+          }
+        }
+      }
+
+    }
+
+    .firstSpan {
+      position: absolute;
+      width: 334px;
+      height: 229px;
+      top: 54px;
+      left: -51px;
+      transform: rotate(90deg);
+    }
+    .firstSpan:before {
+      content: '';
+      position: absolute;
+      width:100%;
+      height: 1px;
+      background: #BFE2FF;
+      animation: anim-ramka-4 2s linear;
+    }
+  }
+  &-first:before {
+    //content: '';
+    //position: absolute;
+    //width: 227px;
+    //height: 100%;
+    //background-repeat: no-repeat;
+    //background-image: linear-gradient(to bottom, #D8D8D8 100%, #D8D8D8 100%);
+    //background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+    //background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    //animation: anim-rightBorder 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
+    //animation-play-state: running;
+
+    @keyframes anim-rightBorder {
+      0% {
+        background-size:    0 1px, 1px 0, 0 1px, 1px 0;
+      }
+      100% {
+        background-size:    0 1px, 1px 100%, 0 1px, 1px 0;
+      }
+    }
+  }
+  &-second {
+    padding: 38px 50px 22px 49px;
+
+    &-titleWrap {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 42px;
+      display: flex;
+
+      &-title {
+        font-family: 'Chakra Petch', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 42px;
+        text-transform: uppercase;
+        position: relative;
+        //animation-delay: 2s;
+      }
+      .firstText {
+        color: #FF6ED6;
+        transition: transform .8s 1s;
+      }
+      .secondText {
+        color: #fff;
+        white-space: nowrap;
+        transition: transform .8s 1.15s;
+      }
+    }
+
+    &-description {
+      font-family: 'Space Grotesk', sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 27px;
+      color: #FFFFFF;
+      opacity: 0.85;
+      max-width: 563px;
+      margin: 12px 0 32px 0;
+      overflow: hidden;
+
+      .text {
+        transition: .8s 1s;
+      }
+    }
+    &-btnWrap {
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      padding: 1px;
+
+      .priceBTN, .howToBuyBTN {
+        transition: transform, opacity;
+        transition-duration: 1s;
+        transition-delay: 1.5s;
+      }
+
+      .howToBuyBTN {
+        text-decoration: none;
+        margin-left: 30px;
+        transition-delay: 2.2s;
+      }
+    }
+  }
+
+  .time,
+  .firstText,
+  .secondText,
+  .text,
+  .priceBTN,
+  .howToBuyBTN {
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  }
+}
+.descBlock:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right,  #98989C 100%, #98989C 100%),
+                    linear-gradient(to bottom, #98989C 100%, #98989C 100%),
+                    linear-gradient(to right,  #98989C 100%, #98989C 100%),
+                    linear-gradient(to bottom, #98989C 100%, #98989C 100%);
+  background-size: 0 1px, 1px 0, 0 1px, 1px 0;
+  //background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+  background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+  //animation-fill-mode: forwards !;
+  //animation: anim-ramka-6 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
+  //animation: anim-ramka-6 1.5s linear 1;
+  //animation-play-state: running;
+
+  @keyframes anim-ramka-6 {
+    0% {background-size: 0 1px, 1px 0, 0 1px, 1px 0;}
+    25% {background-size: 0 1px, 1px 100%, 0 1px, 1px 0;}
+    50% {background-size: 0 1px, 1px 100%, 100% 1px, 1px 0;}
+    75% {background-size: 0 1px, 1px 100%, 100% 1px, 1px 100%;}
+    100% {background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;}
+  }
+}
+.descBlock:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url("../../../../assets/images/mainBlock/noizeBG.png");
+}
+
+//*new updates start
+@media (max-width: 1300px) {
+  // .descBlock {
+  //   position: relative;
+  //   margin-bottom: 32px;
+  //   border-radius: 16px;
+  //   border: 1px solid rgba(216, 216, 216, 0.7);
+
+  //   &::before{
+  //     content: none;
+  //     display: none;
+  //   }
+  // }
+
+  // .descBlock-first {
+  //   width: 198px;
+  //   flex: 0 0 198px;
+  // }
+
+  // .descBlock-first-timer{
+  //   padding: 41px 20px;
+  //   text-align: center;
+  // }
+  // .descBlock-first-timer .timeWrap .time {
+  //   position: static;
+  // }
+
+  // .descBlock-second {
+  //   flex: 1 1 calc(100% - 198px);
+  // }
+
+}
+
+
+@media (max-width: 992px) {
+  .descBlock {
+    position: relative;
+    margin-bottom: 32px;
+    border-radius: 16px;
+    border: 1px solid rgba(216, 216, 216, 0.7);
+
+    &::before{
+      content: none;
+      display: none;
+    }
+  }
+
+  .descBlock-first {
+    width: 198px;
+    flex: 0 0 198px;
+  }
+
+  .descBlock-first-timer{
+    padding: 41px 20px;
+    text-align: center;
+  }
+  .descBlock-first-timer .timeWrap .time {
+    position: static;
+  }
+
+  .descBlock-second {
+    flex: 1 1 calc(100% - 198px);
+  }
+
+  //
+
+
+  .descBlock{
+    flex-wrap: wrap;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 78px;
+      width: 100%;
+      height: 1px;
+      background: #98989C;
+      transform-origin: right;
+      transition: transform 0.8s;
+    }
+  }
+
+  .descBlock-first-videoWrap{
+    padding: 20px;
+    height: calc(100% - 78px);
+
+    &::before {
+      display: none;
+      content: none;
+      transition-delay: .4s;
+    }
+  }
+
+  .descBlock-first-timer{
+    padding: 24px 20px;
+  }
+
+  .descBlock-second{
+    padding: 0;
+  }
+
+  .descBlock-second-titleWrap{
+    padding: 0 32px;
+    margin: 18px 0 40px;
+    height: auto;
+  }
+  .descBlock-second-description {
+    margin: 0;
+    padding: 0 32px;
+    // border-top: 1px solid rgba(216, 216, 216, 0.7);
+  }
+
+  .descBlock-third{
+    flex: 1 1 100%;
+    padding: 32px;
+    border-top: 1px solid rgba(216, 216, 216, 0.7);
+  }
+
+}
+
+@media (max-width: 760px) {
+  .descBlock-second-titleWrap-title{
+    font-size: 24px;
+  }
+
+  .descBlock-second-titleWrap-title{
+    font-size: 20px;
+  }
+
+  .descBlock-first-timer{
+    font-size: 20px;
+  }
+
+  .descBlock-first-timer {
+    padding: 24px 6px;
+  }
+
+  .descBlock-first {
+    width: 164px;
+    flex: 0 0 164px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .descBlock{
+    margin-bottom: 17px;
+  }
+
+  .descBlock::before{
+    content: '';
+    display: none;
+  }
+
+  .descBlock-third{
+    padding: 22px 14px;
+  }
+
+  .descBlock-second-description{
+    margin-bottom: 18px;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .descBlock-second-titleWrap{
+    margin: 17px 0 7px;
+    padding: 0 20px;
+  }
+
+  .descBlock-second-titleWrap-title{
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 410px) {
+  .descBlock-second-titleWrap-title{
+    font-size: 17px;
+  }
+}
+
+//*new updates end
