@@ -13350,7 +13350,7 @@
                                             style: {
                                                 color: "#FF3BC8"
                                             },
-                                            children: "10%"
+                                            children: "0%"
                                         })]
                                     }), (0, De.jsxs)("div", {
                                         className: "text",
