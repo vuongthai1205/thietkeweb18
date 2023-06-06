@@ -16370,7 +16370,6 @@
                                     children: (0, De.jsx)("a", {
                                         className: "link",
                                         href: Xo.volt.dashboard.link,
-                                        target: "_blank",
                                         children: Xo.volt.dashboard.text
                                     })
                                 }), (0, De.jsx)("div", {
