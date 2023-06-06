@@ -7749,7 +7749,8 @@ footer {
 .joinusMain .joinusMain-block-bottom-soc {
     align-items: center;
     display: flex;
-    height: 100%
+    height: 100%;
+    justify-content: center;
 }
 
 .joinusMain .joinusMain-block-bottom-soc-icon {

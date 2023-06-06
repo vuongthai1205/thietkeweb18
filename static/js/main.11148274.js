@@ -14126,7 +14126,7 @@
                                     children: "JOIN OUR COMMUNITY"
                                 }), (0, De.jsxs)("a", {
                                     className: "joinusMain-block-join-top-ticker",
-                                    href: "https://t.me/zibuio",
+                                    href: "https://t.me/zibuerc",
                                     target: "_blank",
                                     children: [(0, De.jsx)("span", {
                                         className: "gradient-border"
@@ -14196,27 +14196,11 @@
                                     className: "joinusMain-block-bottom-soc",
                                     children: [(0, De.jsx)("a", {
                                         className: "joinusMain-block-bottom-soc-icon",
-                                        href: "https://twitter.com/ZIBUio",
+                                        href: "https://twitter.com/ZIBU_ERC",
                                         target: "_blank"
                                     }), (0, De.jsx)("a", {
                                         className: "joinusMain-block-bottom-soc-icon",
-                                        href: "https://t.me/zibuio",
-                                        target: "_blank"
-                                    }), (0, De.jsx)("a", {
-                                        className: "joinusMain-block-bottom-soc-icon",
-                                        href: "https://medium.com/@zibuio",
-                                        target: "_blank"
-                                    }), (0, De.jsx)("a", {
-                                        className: "joinusMain-block-bottom-soc-icon",
-                                        href: "https://www.youtube.com/@zibuio",
-                                        target: "_blank"
-                                    }), (0, De.jsx)("a", {
-                                        className: "joinusMain-block-bottom-soc-icon",
-                                        href: "https://www.instagram.com/zibuio/",
-                                        target: "_blank"
-                                    }), (0, De.jsx)("a", {
-                                        className: "joinusMain-block-bottom-soc-icon",
-                                        href: "https://www.reddit.com/r/zibuio/",
+                                        href: "https://t.me/zibuerc ",
                                         target: "_blank"
                                     })]
                                 })]
@@ -16454,7 +16438,7 @@
                                 })
                             })]
                         }), (0, De.jsx)("footer", {
-                            children: "Copyright \xa92022 Zibu - All Rights Reserved"
+                            children: "Copyright \xa92023 Zibu - All Rights Reserved"
                         })]
                     })
                 },
