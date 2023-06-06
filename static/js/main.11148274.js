@@ -16002,27 +16002,27 @@
                     volt: {
                         payment: {
                             text: "Payment Cycle Voting System",
-                            link: "/volt/#payment"
+                            link: "#"
                         },
                         chain: {
                             text: "The Chain",
-                            link: "/volt/#chain"
+                            link: "#"
                         },
                         roadmap: {
                             text: "Roadmap",
-                            link: "/volt/#roadmap"
+                            link: "#"
                         },
                         dashboard: {
                             text: "Dashboard",
-                            link: "http://dashboard.zibu.io/"
+                            link: "#"
                         },
                         faq: {
                             text: "FAQ",
-                            link: "/volt/#faq"
+                            link: "#"
                         },
                         joinUs: {
                             text: "Join Us",
-                            link: "/volt/#joinUs"
+                            link: "#"
                         }
                     }
                 },
